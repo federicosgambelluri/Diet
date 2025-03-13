@@ -41,84 +41,106 @@
             padding: 10px;
             border-radius: 5px;
         }
+        select {
+            padding: 5px;
+            font-size: 16px;
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Dieta 3000 Kcal per Massa Muscolare</h1>
-    </header>
-    
-    <section class="meal">
-        <h2>🥣 Colazione (~700 kcal)</h2>
-        <ul>
-            <li>100g fiocchi d'avena</li>
-            <li>250ml latte parzialmente scremato</li>
-            <li>30g proteine in polvere o 200g yogurt greco 0%</li>
-            <li>10g miele</li>
-            <li>10g burro di arachidi</li>
-            <li>1 banana</li>
-        </ul>
-    </section>
-    
-    <section class="meal">
-        <h2>🍏 Spuntino Metà Mattina (~450 kcal)</h2>
-        <ul>
-            <li>50g pane integrale</li>
-            <li>50g bresaola o tacchino fresco</li>
-            <li>15g mandorle o noci</li>
-            <li>1 frutto (mela o pera)</li>
-        </ul>
-    </section>
-    
-    <section class="meal">
-        <h2>🍝 Pranzo (~900 kcal)</h2>
-        <ul>
-            <li>130g riso basmati o pasta integrale</li>
-            <li>150g petto di pollo / 140g manzo magro / 200g merluzzo</li>
-            <li>Verdure a piacere</li>
-            <li>15g olio EVO</li>
-            <li>30g parmigiano o grana padano</li>
-        </ul>
-    </section>
-    
-    <section class="meal">
-        <h2>💪 Spuntino Pre-Workout (~400 kcal)</h2>
-        <ul>
-            <li>100g pane integrale</li>
-            <li>50g fesa di tacchino</li>
-            <li>10g burro di arachidi</li>
-            <li>1 frutto (banana o datteri)</li>
-        </ul>
-    </section>
-    
-    <section class="meal">
-        <h2>🔥 Post-Workout (~500 kcal)</h2>
-        <ul>
-            <li>40g proteine in polvere o 200g yogurt greco</li>
-            <li>30g miele o maltodestrine</li>
-            <li>40g gallette di riso</li>
-            <li>5g cacao amaro</li>
-        </ul>
-    </section>
-    
-    <section class="meal">
-        <h2>🍗 Cena (~850 kcal)</h2>
-        <ul>
-            <li>160g patate dolci o 120g riso integrale</li>
-            <li>180g salmone / 150g pollo / 140g manzo</li>
-            <li>Verdure a piacere</li>
-            <li>15g olio EVO</li>
-            <li>10g semi di zucca o girasole</li>
-        </ul>
-    </section>
-    
-    <section class="meal">
-        <h2>🌙 Spuntino Pre-Nanna (~300 kcal)</h2>
-        <ul>
-            <li>30g caseina o 200g yogurt greco</li>
-            <li>10g burro di arachidi</li>
-            <li>15g mandorle</li>
-        </ul>
-    </section>
+<header>
+    <h1>Dieta 3000 Kcal per Massa Muscolare</h1>
+</header>
+
+<section class="meal">
+    <h2>🥣 Colazione (~700 kcal)</h2>
+    <ul>
+        <li>
+            <label>Carboidrati: </label>
+            <select>
+                <option>100g fiocchi d'avena - 380 kcal</option>
+                <option>4 Weetabix - 261 kcal</option>
+                <option>100g fiocchi di riso - 370 kcal</option>
+            </select>
+        </li>
+        <li>250ml latte parzialmente scremato - 103 kcal</li>
+        <li>
+            <label>Proteine: </label>
+            <select>
+                <option>30g proteine in polvere - 108 kcal</option>
+                <option>150g yogurt greco 0% - 81 kcal</option>
+            </select>
+        </li>
+        <li>1 banana - 130 kcal</li>
+    </ul>
+</section>
+
+<section class="meal">
+    <h2>🍏 Spuntino Metà Mattina (~450 kcal)</h2>
+    <ul>
+        <li>50g pane integrale</li>
+        <li>50g bresaola o tacchino fresco</li>
+        <li>15g mandorle o noci</li>
+        <li>1 frutto (mela o pera)</li>
+    </ul>
+</section>
+
+<section class="meal">
+    <h2>🍝 Pranzo (~900 kcal)</h2>
+    <ul>
+        <li>
+            <label>Carboidrati: </label>
+            <select>
+                <option>130g riso basmati - 460 kcal</option>
+                <option>130g pasta integrale - 450 kcal</option>
+            </select>
+        </li>
+        <li>
+            <label>Proteine: </label>
+            <select>
+                <option>150g petto di pollo - 165 kcal</option>
+                <option>140g manzo magro - 210 kcal</option>
+                <option>200g merluzzo - 150 kcal</option>
+            </select>
+        </li>
+        <li>Verdure a piacere</li>
+        <li>15g olio EVO - 135 kcal</li>
+        <li>30g parmigiano o grana padano - 120 kcal</li>
+    </ul>
+</section>
+
+<section class="meal">
+    <h2>🍗 Cena (~850 kcal)</h2>
+    <ul>
+        <li>
+            <label>Carboidrati: </label>
+            <select>
+                <option>160g patate dolci - 140 kcal</option>
+                <option>120g riso integrale - 430 kcal</option>
+            </select>
+        </li>
+        <li>
+            <label>Proteine: </label>
+            <select>
+                <option>180g salmone - 360 kcal</option>
+                <option>150g pollo - 165 kcal</option>
+                <option>140g manzo - 210 kcal</option>
+            </select>
+        </li>
+        <li>Verdure a piacere</li>
+        <li>15g olio EVO - 135 kcal</li>
+        <li>10g semi di zucca o girasole - 50 kcal</li>
+    </ul>
+</section>
+
+<section class="meal">
+    <h2>🌙 Spuntino Pre-Nanna (~300 kcal)</h2>
+    <ul>
+        <li>30g caseina o 200g yogurt greco</li>
+        <li>10g burro di arachidi</li>
+        <li>15g mandorle</li>
+    </ul>
+</section>
 </body>
 </html>
