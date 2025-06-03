@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dieta 2787 Kcal per Massa Muscolare</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diete per Massa e Definizione</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,16 +16,22 @@
             background: dodgerblue;
             color: white;
             padding: 20px;
-            font-size: 24px;
         }
-        .meal {
+        select {
+            padding: 8px;
+            font-size: 16px;
+            margin: 20px 10px;
+        }
+        .diet {
+            display: none;
             background: white;
             margin: 20px auto;
             padding: 20px;
-            width: 80%;
-            max-width: 600px;
+            width: 90%;
+            max-width: 700px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
         }
         h2 {
             color: dodgerblue;
@@ -40,37 +46,25 @@
             padding: 10px;
             border-radius: 5px;
         }
-        select {
-            padding: 5px;
-            font-size: 16px;
-            margin: 5px 0;
-        }
-        .macros {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            font-size: 18px;
-        }
     </style>
 </head>
 <body>
-<header>
-    <h1>Dieta 2787 Kcal per Massa Muscolare</h1>
-</header>
-<section class="macros">
-    <h2>Macronutrienti giornalieri consigliati</h2>
-    <p><strong>Calorie:</strong> ~2787 kcal</p>
-    <p><strong>Proteine:</strong> ~130-140g (1.9-2.1g/kg per 67kg di peso)</p>
-    <p><strong>Carboidrati:</strong> ~420-430g</p>
-    <p><strong>Grassi:</strong> ~55-65g (0.8-1g/kg per 67kg di peso)</p>
-</section>
 
-<section class="meal">
-    <h2>🥣 Colazione (~650 kcal)</h2>
+<header>
+    <h1>Seleziona la tua Dieta</h1>
+    <select onchange="mostraDieta(this.value)">
+        <option value="">-- Scegli --</option>
+        <option value="massa">Dieta Massa Muscolare (2787 kcal)</option>
+        <option value="definizione">Dieta Definizione (2200 kcal)</option>
+    </select>
+</header>
+
+<!-- Dieta Massa -->
+<div id="massa" class="diet">
+    <h2>Dieta Massa Muscolare - 2787 kcal</h2>
+    <p><strong>Proteine:</strong> 130-140g • <strong>Carboidrati:</strong> 420-430g • <strong>Grassi:</strong> 55-65g</p>
+
+    <h3>Colazione (~650 kcal)</h3>
     <ul>
         <li>
             <label>Carboidrati: </label>
@@ -94,10 +88,8 @@
         <li>🍌 1 banana - 130 kcal</li>
         <li>10g miele - 47 kcal</li>
     </ul>
-</section>
 
-<section class="meal">
-    <h2>🍏 Spuntino Metà Mattina (~400 kcal)</h2>
+    <h3>Spuntino (~400 kcal)</h3>
     <ul>
         <li>40g pane integrale - 100 kcal</li>
         <li>
@@ -121,10 +113,8 @@
         </li>
         <li>1 frutto (mela o pera) - 80 kcal</li>
     </ul>
-</section>
 
-<section class="meal">
-    <h2>🍝 Pranzo (~850 kcal)</h2>
+    <h3>Pranzo (~850 kcal)</h3>
     <ul>
         <li>
             <label>Carboidrati: </label>
@@ -147,44 +137,40 @@
         <li>12g olio EVO - 108 kcal</li>
         <li>25g parmigiano o grana padano - 100 kcal</li>
     </ul>
-</section>
 
-<section class="meal">
-    <h2>💪 Spuntino Pre-Workout (~400 kcal)</h2>
+    <h3>Pre-Workout (~400 kcal)</h3>
     <ul>
         <li>
             <label>Carboidrati: </label>
             <select>
-                <option>3 gallette di riso + 1 cucchiaino di miele 🍯 - 120 kcal</option>
-                <option>40g pane bianco o integrale - 100 kcal</option>
-                <option>200ml latte parzialmente scremato 🥛 - 82 kcal</option>
-                <option>35g farina d'avena o crema di riso - 130 kcal</option>
+                <option>3 gallette di riso + miele - 120 kcal</option>
+                <option>40g pane - 100 kcal</option>
+                <option>200ml latte - 82 kcal</option>
+                <option>35g farina d'avena - 130 kcal</option>
             </select>
         </li>
         <li>
-            <label>Fonte proteica: </label>
+            <label>Proteine: </label>
             <select>
                 <option>25g proteine in polvere - 90 kcal</option>
                 <option>80g yogurt greco 0% - 43 kcal</option>
                 <option>40g fesa di tacchino - 80 kcal</option>
                 <option>40g fiocchi di latte - 45 kcal</option>
-                <option>2 albumi cotti (liquidi pastorizzati) - 34 kcal</option>
+                <option>2 albumi cotti - 34 kcal</option>
             </select>
         </li>
         <li>
             <label>Grassi: </label>
             <select>
-                <option>5g cacao amaro per migliorare la vasodilatazione - 20 kcal</option>
-                <option>1 cucchiaino di burro di arachidi 🥜 - 32 kcal</option>
-                <option>1 dattero o mezzo cucchiaino di miele 🍯 - 23 kcal</option>
+                <option>5g cacao amaro - 20 kcal</option>
+                <option>1 cucchiaino burro di arachidi - 32 kcal</option>
+                <option>1 dattero o ½ cucchiaino miele - 23 kcal</option>
                 <option>10g semi di lino o zucca - 50 kcal</option>
             </select>
         </li>
     </ul>
-</section>
 
-<section class="meal">
-    <h2>🍗 Cena (~800 kcal)</h2>
+    <h3>Cena (~800 kcal)</h3>
     <ul>
         <li>
             <label>Carboidrati: </label>
@@ -201,12 +187,131 @@
                 <option>110g manzo - 165 kcal</option>
             </select>
         </li>
-        <li>150g yogurt greco o 25g caseina → (~80 kcal)</li>
+        <li>150g yogurt greco o 25g caseina - 80 kcal</li>
         <li>12g olio EVO - 108 kcal</li>
         <li>10g semi di zucca o girasole - 50 kcal</li>
     </ul>
-</section>
+</div>
+
+<!-- Dieta Definizione -->
+<div id="definizione" class="diet">
+    <h2>Dieta Definizione - 2200 kcal</h2>
+    <p><strong>Proteine:</strong> ~140g • <strong>Carboidrati:</strong> 250-270g • <strong>Grassi:</strong> ~60g</p>
+
+    <h3>Colazione (~500 kcal)</h3>
+    <ul>
+        <li>
+            <label>Carboidrati: </label>
+            <select>
+                <option>60g avena - 228 kcal</option>
+                <option>3 Weetabix - 195 kcal</option>
+                <option>60g farro soffiato - 210 kcal</option>
+            </select>
+        </li>
+        <li>🥛 200ml latte parz. scremato - 82 kcal</li>
+        <li>
+            <label>Proteine: </label>
+            <select>
+                <option>25g proteine in polvere - 90 kcal</option>
+                <option>150g yogurt greco 0% - 81 kcal</option>
+            </select>
+        </li>
+        <li>🍌 1 banana piccola - 90 kcal</li>
+    </ul>
+
+    <h3>Spuntino (~300 kcal)</h3>
+    <ul>
+        <li>30g pane integrale - 75 kcal</li>
+        <li>
+            <label>Fonte proteica: </label>
+            <select>
+                <option>40g bresaola - 80 kcal</option>
+                <option>2 uova sode - 140 kcal</option>
+                <option>150g yogurt greco - 81 kcal</option>
+            </select>
+        </li>
+        <li>
+            <label>Grassi buoni: </label>
+            <select>
+                <option>10g mandorle - 60 kcal</option>
+                <option>1 cucchiaino burro di arachidi - 60 kcal</option>
+            </select>
+        </li>
+        <li>1 frutto - 80 kcal</li>
+    </ul>
+
+    <h3>Pranzo (~650 kcal)</h3>
+    <ul>
+        <li>
+            <label>Carboidrati: </label>
+            <select>
+                <option>90g riso - 320 kcal</option>
+                <option>90g pasta integrale - 310 kcal</option>
+            </select>
+        </li>
+        <li>
+            <label>Proteine: </label>
+            <select>
+                <option>120g pollo - 130 kcal</option>
+                <option>150g merluzzo - 113 kcal</option>
+            </select>
+        </li>
+        <li>Verdure + 10g olio EVO - 140 kcal</li>
+        <li>15g parmigiano - 60 kcal</li>
+    </ul>
+
+    <h3>Pre-Workout (~300 kcal)</h3>
+    <ul>
+        <li>
+            <label>Carboidrati: </label>
+            <select>
+                <option>3 gallette + miele - 120 kcal</option>
+                <option>30g crema di riso - 110 kcal</option>
+            </select>
+        </li>
+        <li>
+            <label>Proteine: </label>
+            <select>
+                <option>25g proteine in polvere - 90 kcal</option>
+                <option>80g yogurt greco - 43 kcal</option>
+            </select>
+        </li>
+        <li>
+            <label>Grassi: </label>
+            <select>
+                <option>5g burro di arachidi - 45 kcal</option>
+                <option>10g semi - 50 kcal</option>
+            </select>
+        </li>
+    </ul>
+
+    <h3>Cena (~450 kcal)</h3>
+    <ul>
+        <li>
+            <label>Carboidrati: </label>
+            <select>
+                <option>150g patate dolci - 132 kcal</option>
+                <option>80g riso integrale - 280 kcal</option>
+            </select>
+        </li>
+        <li>
+            <label>Proteine: </label>
+            <select>
+                <option>120g pollo - 132 kcal</option>
+                <option>110g manzo - 165 kcal</option>
+            </select>
+        </li>
+        <li>150g yogurt greco o 20g caseina - 80 kcal</li>
+        <li>10g olio EVO - 90 kcal</li>
+    </ul>
+</div>
+
+<script>
+    function mostraDieta(id) {
+        document.querySelectorAll('.diet').forEach(d => d.style.display = 'none');
+        if (id) document.getElementById(id).style.display = 'block';
+    }
+</script>
 
 </body>
 </html>
-
